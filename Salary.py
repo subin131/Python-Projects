@@ -1,5 +1,13 @@
 #program to receive the salary of a employee depending on the tax rate
 
+print("**********************************************")
+print("         Income Tax Office                    ")
+print("             Kathmandu                          ")
+
+print("**********************************************")
+name=input("Enter the full name: ")
+address=input("Enter the address: ")
+
 def total_salary():
     salary = int(input("Enter the salary per month: "))
     total_salary=salary*12
@@ -16,9 +24,9 @@ def total_salary():
     elif total_salary>50000:
         new_salary=total_salary*0.65
         return new_salary
-
-print(f"The total salary is per year is : {total_salary()}")
-
+print("**********************************************")
+print(f"Mr.{name} your total salary of 12 months after deducting tax amount is : {total_salary()}")
+print("**********************************************")
 
         
     

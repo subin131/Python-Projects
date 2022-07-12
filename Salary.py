@@ -25,7 +25,7 @@ def total_salary():
         new_salary=total_salary*0.65
         return new_salary
 print("**********************************************")
-print(f"Mr.{name} your total salary of 12 months after deducting tax amount is : {total_salary()}")
+print(f"Mr.{name} your total salary of 12 months after deducting tax amount is :Rs. {total_salary()}")
 print("**********************************************")
 
         

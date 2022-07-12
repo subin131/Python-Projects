@@ -9,6 +9,7 @@ name=input("Enter your name:")
 address=input("Enter your address:")
 phone=input("Enter your phone number:")
 def calculate_tax():
+    
     bike_cc=int(input("Enter the bike cc:"))
     tax=0
     if(bike_cc>=125):

@@ -38,7 +38,6 @@ def unmarried_tax():
         tax=400000*0.99 + (income-400000)*0.90
         tax_rate="10%"
     elif(income>=1700000):
-        
         tax=450000*0.99 + (income-400000)*0.70 
         tax_rate="30%"
     elif(income>2450000):

@@ -1,6 +1,5 @@
 #program to take multiple inputs in dictionary
-from ctypes import cdll
-from re import S
+
 
 
 def initialDisplay():

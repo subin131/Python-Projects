@@ -3,14 +3,16 @@ def initialDisplay():
     inital="""Welcome to the Sunway Student Tracking System (SSTS)"""
     print(inital)
     
+#function to calculate the cube of each number
 def cubesum():
     num=int(input("Enter a number: "))
+    length=len(str(num))
     x=num
-    a=num%10
-    num=int(num/10)
-    b=num%10
-    c=int(num/10)
-    sum=a**3+b**3+c**3
+    sum=0
+    while num>0:
+        a=num%10
+        sum+=a**length
+        num//=10
     return x,sum
     
 def Armstrong():

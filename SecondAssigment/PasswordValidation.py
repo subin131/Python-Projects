@@ -3,6 +3,7 @@ def initialDisplay():
     print(inital)
     
 def passwordValidation():
+    initialDisplay()
     countDigit=0
     countUpper=0
     countLower=0

@@ -11,13 +11,8 @@ class Income:
         self.monthly_income
         self.choice
     
-    def setInput(self):
-        self.name=input("Enter the name: ")
-        self.address=input("Enter the address: ")
-        self.pan=input("Enter the pan number: ")
-        self.year=input("Enter the year: ")
-        self.monthly_income=int(input("Enter the montly_income: "))
-        self.choice=input("Enter the Y for married and N for unmarried: ")
+    
+            
         
     # def calculation(self):
     #     if self.choice=="Y":
@@ -47,16 +42,26 @@ class Income:
     
 
 
-salary=Income()
+
+def setInput():
+        name=input("Enter the name: ")
+        address=input("Enter the address: ")
+        pan=input("Enter the pan number: ")
+        year=input("Enter the year: ")
+        monthly_income=int(input("Enter the montly_income: "))
+        choice=input("Enter the Y for married and N for unmarried: ")
+        if choice=="Y":
+            tax_amt=salary.calculationMarried(monthly_income)
+        else:
+            tax_amt=salary.calculationUnmarried(monthly_income)
+            
+        return tax_amt
+    
 def display():
     initailDisplay()
-    if salary.choice=="Y":
-        tax_m=salary.calculationMarried()
-        print(f"The tax paid by {salary.name} of amount {tax_m}")
-    else:
-        tax_u=salary.calculationUnmarried()
-        print(f"The tax paid by {salary.name} of amount {tax_u}")
- 
+    tax=setInput()
+    print(f"The tax amount {tax}")
+    
 
 
             

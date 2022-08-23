@@ -1,1 +1,1 @@
-{"1": ["Haru", "uk", "1208", "2022", 300000, "Y"], "2": ["Shyam", "usa", "8543", "2020", 65000, "N"]}
+{"1": {"name": "Ram", "address": "ktm", "pan": "5783", "year": "2020", "income": 400000, "choice": "Y"}, "2": {"name": "Shyam", "address": "pokhara", "pan": "789", "year": "2002", "income": 50000, "choice": "N"}}

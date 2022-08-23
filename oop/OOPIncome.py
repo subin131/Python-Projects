@@ -4,15 +4,24 @@ class Income:
         print(initial)
         
     def setInput(self):
-        self.name=input("Enter the name of the employee: ")
-        self.address=input("Enter the name of the address: ")
-        self.pan=input("Enter the pan number: ")
-        self.year=input("Enter the fiscal yaer: ")
-        self.monthly_income=int(input("Enter the monthly income: "))
-        self.choice=input("Enter Y for married and N for unmarried: ")
+        employees={}
+        employee=int(input("How many employee to calculate the tax? "))
+        for i in range(employee):
+            self.name=input(f"Enter the name of {i+1} employee: ")
+            self.address=input(f"Enter the name of {i+1} address: ")
+            self.pan=input(f"Enter the pan number of {i+1} employee: ")
+            self.year=input(f"Enter the fiscal year of {i+1} employee: ")
+            self.monthly_income=int(input(f"Enter the monthly income of {i+1} employee: "))
+            self.choice=input(f"Enter Y for married and N for unmarried for {i+1} employee: ")
+            employees[i+1]=self.name,self.address,self.pan,self.year,self.monthly_income,self.choice
+            self.display()
+        
+        return employees
+        
     #function for married
     def married(self):
         print("You are married!!")
+        #annual income need to calculate
         tax=0
         tax_rate=""
         if self.monthly_income<400000:
@@ -44,13 +53,20 @@ class Income:
         
         if self.choice=="Y":
             tax,tax_rate=self.married()
-            print(f"The tax excluded income is {tax} with the rate {tax_rate} for the income Rs.{t.monthly_income}")
+            # print(f"The tax excluded income is {tax} with the rate {tax_rate} for the income Rs.{t.monthly_income}")
+            return tax,tax_rate
         else:
             tax,tax_rate=self.unmarried()
-            print(f"The tax excluded income is {tax} with the rate {tax_rate} for the income Rs.{t.monthly_income}")
+            # print(f"The tax excluded income is {tax} with the rate {tax_rate} for the income Rs.{t.monthly_income}")
+            return tax,tax_rate
                     
+                    
+    def display(self):
+        tax,tax_rate=self.category()
+        print(f"Name: {self.name}                          Address: {self.address}")
+        print(f"Year: {self.year}                          Pan: {self.pan}")
+        print(f"The tax excluded income is {tax} with the rate {tax_rate} for the income Rs.{self.monthly_income*12}")
+        
 t=Income()
-t.setInput()
-print(f"Name: {t.name}                          Address: {t.address}")
-print(f"Year: {t.year}                          Pan: {t.pan}")
-t.category()
+result=t.setInput()
+print(result)

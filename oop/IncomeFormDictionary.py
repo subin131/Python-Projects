@@ -1,4 +1,4 @@
-import json
+
 
 
 class Income:
@@ -24,7 +24,7 @@ class Income:
             self.monthly_income=int(input(f"Enter the monthly income of {i+1} employee: "))
             self.choice=input(f"Enter Y for married and N for unmarried for {i+1} employee: ")
             self.employees[i+1]={"name":self.name,"address":self.address,"pan":self.pan,"year":self.year,"income":self.monthly_income,"choice":self.choice}
-            # self.employees[i+1]=self.name,self.address,self.pan,self.year,self.monthly_income,self.choice
+            self.employees[i+1]=self.name,self.address,self.pan,self.year,self.monthly_income,self.choice
             # self.display()
             # with open('filehandling/convert.txt', 'w') as file:
                 # file.write(json.dumps(self.employees))
@@ -41,7 +41,7 @@ class Income:
             data=self.employees[item]
             for i in data.values:
                 print(i)
-            # print(f"{key} :{value}")
+            # print(f"{key} :{value}")  
             # annual_income=self.employees[item+4]*12
             # print(annual_income)
             # if annual_income<400000:

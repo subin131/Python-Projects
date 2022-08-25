@@ -13,7 +13,7 @@ def inputDisplay():
         year=input(f"Enter the fiscal year of {i+1} employee:  ")
         salary=int(input(f"Enter the salary {i+1} employee: "))
         choice=input(f"Enter Y for married and N for unmarried of {i+1} employee: ")
-        employees[i+1]={f'name': name, 'year':year, 'salary':salary,'choice':choice}
+        employees[i+1]={'name': name, 'year':year, 'salary':salary,'choice':choice}
         
     return employees
 

@@ -39,19 +39,19 @@ def tax_married(s):
     tax_amt=0
     tax_rate=""
     income=s*12
-    if(income>=450000):
+    if(income<=450000):
         tax_amt=income*0.99
         tax=income-tax_amt
         tax_rate="1%"
-    elif(income>=550000):
+    elif(income<=550000):
         tax_amt=income*0.90
         tax=income-tax_amt
         tax_rate="10%"
-    elif(income>=1700000):
+    elif(income<=1700000):
         tax_amt=income*0.80
         tax=income-tax_amt
         tax_rate="20%"
-    elif(income>2450000):
+    elif(income<2450000):
         tax_amt=income*0.64
         tax=income-tax_amt
         tax_rate="36%"
@@ -63,15 +63,15 @@ def tax_unmarried(s):
     tax_rate=""
     tax_amt=""
     income=s*12
-    if(income>=400000):
+    if(income<=400000):
         tax_amt=income*0.99
         tax=income-tax_amt
         tax_rate="1%"
-    elif(income>=500000):
+    elif(income<=500000):
         tax_amt=income*0.90
         tax=income-tax_amt
         tax_rate="10%"
-    elif(income>=1700000):
+    elif(income<=1700000):
         tax_amt=income*0.80
         tax=income-tax_amt
         tax_rate="20%"

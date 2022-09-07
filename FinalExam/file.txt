@@ -1,0 +1,1 @@
+{"1": {"name": "Ram", "year": "2020", "salary": 30000, "choice": "Y"}, "2": {"name": "Shyam Thapa", "year": "2022", "salary": 70000, "choice": "N"}}

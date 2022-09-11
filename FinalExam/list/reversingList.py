@@ -1,4 +1,7 @@
 #taking inputs from the user
+from hashlib import new
+
+
 frd=[]
 num=int(input("How many name you gonna add: "))
 #adding the item in list 
@@ -9,6 +12,7 @@ for i in range(num):
 print(frd)
 print(len(frd))
 #reversing in the list
-for i in frd:
+for i in reversed(frd):
     new_frd=[]
-    new_frd.append()
+    new_frd.append(i)
+    print(new_frd)
